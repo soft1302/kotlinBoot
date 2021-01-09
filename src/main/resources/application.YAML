@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/kotlin
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    dbcp2:
+      test-while-idle: true
+      validation-query: SELECT 1
+  jpa:
+    database: MYSQL
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
